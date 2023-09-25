@@ -1,4 +1,4 @@
-import { User } from "../domain/User.js";
+import { User } from "../dominio/User.js";
 
 
 export class RegisterUser {

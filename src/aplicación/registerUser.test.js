@@ -1,4 +1,4 @@
-import { UserRepositoryFile } from "../infrastructure/UserRepositoryFile.js";
+import { UserRepositoryFile } from "../infraestructura/UserRepositoryFile.js";
 import { RegisterUser } from "./registerUser.js";
 import { describe, it, expect } from "vitest";
 

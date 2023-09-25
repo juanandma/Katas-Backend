@@ -1,7 +1,7 @@
-import { User } from "../domain/User.ts"
-import { UserRepository } from "../domain/UserRepository.ts";
+import { User } from "../dominio/User.js"
+import { UserRepository } from "../dominio/UserRepository.js";
 
-const sleep = function(ms: number) {
+const sleep = function(ms) {
     return new Promise(function(resolve) {
         return setTimeout(resolve, ms)
     })
