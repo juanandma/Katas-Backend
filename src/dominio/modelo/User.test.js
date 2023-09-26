@@ -1,6 +1,8 @@
 import { describe, it, expect } from "vitest";
 import { User } from "./User.js";
 import { UserAge } from "./UserAge.js";
+import { UserEmail } from "./UserEmail.js";
+
 
 
 
@@ -32,7 +34,9 @@ describe("User", () => {
         const password = "123456";
         const age = 18;
         const user = new User(id, name, email, password, age);
-        return expect(user.hasEmail(email)).toBeTruthy();
+        return expect(
+            user.hasEmail(email)
+        ).toBe(true);
     })
     it("has an age", function () {
         const id = "1";
@@ -41,9 +45,9 @@ describe("User", () => {
         const password = "123456";
         const age = 18;
         const user = new User(id, name, email, password, age);
-        return expect(function () {
-            return user.hasAge(new UserAge(age))
-        }).toBeTruthy();
+        return expect(
+            user.hasAge(age)
+        ).toBe(true);
     })
 
     it("should create a user", function () {
@@ -54,7 +58,7 @@ describe("User", () => {
         const age = 18;
         const user = new User(id, name, email, password, age);
 
-        return expect(user.email).toEqual("juan@email.com");
+        return expect(user.email).toEqual(new UserEmail(email));
     })
 
     it("fails if a user with age less than 18 is created", function () {

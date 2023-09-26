@@ -14,8 +14,6 @@ export class UserPassword {
     }
     */
     hasPassword(password){
-        console.log(password);
-        console.log(this.password);
         return password===this.password;
     }
 }

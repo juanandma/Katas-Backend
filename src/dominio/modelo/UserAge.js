@@ -8,4 +8,7 @@ export class UserAge {
             throw new Error("Invalid age");
         }
     }
+    equals(other) {
+        return this.age === other.age
+    }
 }
